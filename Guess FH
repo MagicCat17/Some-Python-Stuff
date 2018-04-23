@@ -1,0 +1,42 @@
+import random
+import time
+
+
+print ("Number Guessing Game")
+time.sleep(0.5)
+
+print ("You will try to guess a Number between 1 and 100.")
+
+time.sleep(0.5)
+
+#Generate random integer
+generatedNumber = random.randint(1,101)
+
+#For testing and debugging purposes only
+#print (generatedNumber)
+
+#Take users integer input cobvert from string to int to fix output/logical error
+guess = int(raw_input("Enter a Number:"))
+
+
+#Check if user input is an integer
+try:
+   val = int(guess)
+except ValueError:
+   print("That's not a number!")
+
+#Check is users guess is correct 
+
+if guess is generatedNumber:
+  print ("Correct, the number is " + str(generatedNumber))
+ 
+
+  
+
+#Runs if users guess is incorrect
+else:
+  print ("Wrong, the number is " + str(generatedNumber))
+
+
+
+
